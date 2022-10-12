@@ -8,11 +8,11 @@ public class PopulationManager : MonoBehaviour
 
 
 
-    public static float PopulationCount;
+    public static float PopulationCount= 10000;
     public float InternalPopulation;
     public GameObject DisplayPop;
-
-
+    public float timeRemaining = 10;
+   
     private void Update()
     {
         switch(LevelManager.statLevelMairie)
@@ -34,11 +34,22 @@ public class PopulationManager : MonoBehaviour
 
         }
 
-
+        
         PopulationCount = InternalPopulation;
-        while(PollutionManager.InternalePollution>100)
+        if (PolutionManager.statHighPollution)
         {
-            PopulationCount--;
+            if (timeRemaining>0)
+            {
+                timeRemaining--;
+                
+            }
+            else
+            {
+                PopulationCount--;
+                timeRemaining = 10;
+            }
+            
+
         }
         DisplayPop.GetComponent<TMP_Text>().text = " Pop = " + PopulationCount;
     }

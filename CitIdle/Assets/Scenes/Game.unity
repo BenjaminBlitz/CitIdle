@@ -828,6 +828,7 @@ GameObject:
   - component: {fileID: 573219332}
   - component: {fileID: 573219331}
   - component: {fileID: 573219334}
+  - component: {fileID: 573219335}
   m_Layer: 0
   m_Name: ButtonTech
   m_TagString: Untagged
@@ -872,6 +873,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 536bdc598bd0a9d44af7d107e2ada7db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &573219335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 573219330}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6f1896d5260c2e4da38c32d49d00e90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &671597543
@@ -1324,9 +1337,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 573219334}
-        m_TargetAssemblyTypeName: GoToShop, Assembly-CSharp
-        m_MethodName: GoShop
+      - m_Target: {fileID: 573219335}
+        m_TargetAssemblyTypeName: ParkButton, Assembly-CSharp
+        m_MethodName: clickOnPark
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2147,6 +2160,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InternalPopulation: 0
   DisplayPop: {fileID: 521020308}
+  timeRemaining: 10
 --- !u!114 &2069266887
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2161,6 +2175,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InternalPolution: 0
   DisplayPolution: {fileID: 1675953505}
+  highPollution: 0
 --- !u!1 &2130816425
 GameObject:
   m_ObjectHideFlags: 0

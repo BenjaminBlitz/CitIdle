@@ -9,6 +9,8 @@ public class ParkManager : MonoBehaviour
 
     void Update()
     {
+
+        
         reducePo = reducePollution;
         reducePollution = (float)0.1 * LevelManager.statLevelPark;
         reducePo = reducePollution;

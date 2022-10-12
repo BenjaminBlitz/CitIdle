@@ -6,7 +6,11 @@ public class ParkButton : MonoBehaviour
 {
     public void clickOnPark()
     {
-        //Add Level Parc
+        if (MoneyManager.InternalMoney>LevelManager.statLevelPark* 2.5 )
+        {
+            LevelManager.statLevelPark++;
+            MoneyManager.InternalMoney -= LevelManager.statLevelPark *(float) 2.5;
 
+        }
     }
 }
