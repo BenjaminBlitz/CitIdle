@@ -16,7 +16,7 @@ public class PopulationManager : MonoBehaviour
     private void Update()
     {
         PopulationCount = InternalPopulation;
-        DisplayPop.GetComponent<TMP_Text>().text = " $ = " + PopulationCount;
+        DisplayPop.GetComponent<TMP_Text>().text = " Pop = " + PopulationCount;
     }
 }
 
