@@ -16,42 +16,18 @@ public class MoneyManager : MonoBehaviour
 
     private void Update()
     {
-
+        InternalMoney += (float)(PopulationManager.PopulationCount * 0.0000001);
         MoneyCount = InternalMoney;
-        if (CreatingMoney == false)
-        {
-            CreatingMoney = true;
-<<<<<<< Updated upstream
-           // StartCoroutine(CreateMoney());
-=======
-            StartCoroutine(CreateMoney());
->>>>>>> Stashed changes
-
-        }
-        MoneyCount += (float)(PopulationManager.PopulationCount * 0.000001);
         DisplayMoney.GetComponent<TMP_Text>().text = " $ = " + MoneyCount;
-<<<<<<< Updated upstream
-=======
+
     }
 
 
 
 
-    IEnumerator CreateMoney()
-    {
-        MoneyCount += (float) InternalIncrease * PopulationManager.PopulationCount*0.00001);
-        yield return new WaitForSeconds(1);
-        CreatingCrystal = false;
->>>>>>> Stashed changes
-    }
 
 
 
 
-   /* IEnumerator CreateMoney()
-    {
-       /* MoneyCount += (float) InternalIncrease * PopulationManager.PopulationCount*0.1);
-        yield return new WaitForSeconds(1);
-        CreatingCrystal = false;
-    }*/
+ 
 }

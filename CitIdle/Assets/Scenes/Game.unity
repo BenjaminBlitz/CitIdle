@@ -2115,6 +2115,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MoneyCount: 0
   DisplayMoney: {fileID: 546757261}
+  InternalIncrease: 0
+  MoneyIncrease: 0
+  CreatingMoney: 0
 --- !u!4 &2069266885
 Transform:
   m_ObjectHideFlags: 0

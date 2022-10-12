@@ -33,9 +33,13 @@ public class PopulationManager : MonoBehaviour
 
 
         }
-           
+
 
         PopulationCount = InternalPopulation;
+        while(PollutionManager.InternalePollution>100)
+        {
+            PopulationCount--;
+        }
         DisplayPop.GetComponent<TMP_Text>().text = " Pop = " + PopulationCount;
     }
 }
