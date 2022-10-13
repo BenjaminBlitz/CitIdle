@@ -22,7 +22,7 @@ public class MoneyManager : MonoBehaviour
         {
             MoneyCount = 0;
         }
-        DisplayMoney.GetComponent<TMP_Text>().text = " $ = " + InternalMoney;
+        DisplayMoney.GetComponent<TMP_Text>().text = " $ = " + Mathf.Round(InternalMoney * 10000.0f) * 0.0001f;
 
     }
 
