@@ -5,7 +5,7 @@ using UnityEngine;
 public class ClickMairieAnimation : MonoBehaviour
 {
     public GameObject obj = null;
-    public GameObject gain = null;
+    public GameObject gain = null; 
 
     private Animator movement = null;
     // Start is called before the first frame update
