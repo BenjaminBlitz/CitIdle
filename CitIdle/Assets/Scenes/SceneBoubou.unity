@@ -386,7 +386,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: $
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
+  m_fontAsset: {fileID: 0}
   m_sharedMaterial: {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -764,12 +764,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 623256924}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 89d96769e8b6e484fbc5cbf49ed21d37, type: 3}
+  m_Script: {fileID: 11500000, guid: f939862b920f193439ca7f5bdc5fba34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   obj: {fileID: 623256924}
   gain: {fileID: 1253563391}
-  movement: {fileID: 0}
 --- !u!1 &766376885
 GameObject:
   m_ObjectHideFlags: 0
@@ -1064,12 +1063,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1328659177}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cab756e2457af80449d6fdea1e7a7b50, type: 3}
+  m_Script: {fileID: 11500000, guid: 41c2db00b9d6cc6459a0a8f35c732d35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   obj: {fileID: 1328659177}
   gain: {fileID: 101884656418554566, guid: ec64d33fe47201b4283836a815e7e724, type: 3}
-  movement: {fileID: 0}
 --- !u!61 &1328659182
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1252,7 +1250,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Pop : '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
+  m_fontAsset: {fileID: 0}
   m_sharedMaterial: {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -1387,7 +1385,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: ' 1 000'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
+  m_fontAsset: {fileID: 0}
   m_sharedMaterial: {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -1794,7 +1792,7 @@ MonoBehaviour:
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
+  m_fontAsset: {fileID: 0}
   m_sharedMaterial: {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -1913,12 +1911,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 2117659540}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 89d96769e8b6e484fbc5cbf49ed21d37, type: 3}
+  m_Script: {fileID: 11500000, guid: f939862b920f193439ca7f5bdc5fba34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   obj: {fileID: 2117659540}
   gain: {fileID: 6384452851117894360, guid: 1fd1ef324e4fb014a89d86983dcc5d57, type: 3}
-  movement: {fileID: 0}
 --- !u!95 &2117659543
 Animator:
   serializedVersion: 4
@@ -2112,6 +2109,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5189539684495149947, guid: ec64d33fe47201b4283836a815e7e724, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ec64d33fe47201b4283836a815e7e724, type: 3}
 --- !u!1001 &6181140008360350275
@@ -2121,6 +2122,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1294546700825322341, guid: 1fd1ef324e4fb014a89d86983dcc5d57, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 6384452851117894360, guid: 1fd1ef324e4fb014a89d86983dcc5d57, type: 3}
       propertyPath: m_Name
       value: CarPopUp
