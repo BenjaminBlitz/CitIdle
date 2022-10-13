@@ -20,11 +20,11 @@ public class BankManager : MonoBehaviour
     {
         return n.name;
     }
-    public string getName(Stock n)
+    /*public string getName(Stock n)
     {
         return n.name;
     }s
-    Stock tesla = new Stock("tesla", 100);
+    Stock tesla = new Stock("tesla", 100);*/
     void Update()
     {
         
