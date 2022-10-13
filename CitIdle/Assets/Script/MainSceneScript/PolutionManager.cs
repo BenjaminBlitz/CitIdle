@@ -9,6 +9,8 @@ public class PolutionManager : MonoBehaviour
     public static float PolutionCount;
     public float InternalPolution;
     public GameObject DisplayPolution;
+    public GameObject DisplayPol;
+    public float maxPolution;
     public bool highPollution;
     public static bool statHighPollution;
 
@@ -19,7 +21,7 @@ public class PolutionManager : MonoBehaviour
       
         
         InternalPolution += (float)(LevelManager.statLevelBank * 0.000000001 + LevelManager.statLevelMairie * 0.000000001 + LevelManager.statLevelPark * 0.000000001+PopulationManager.PopulationCount*0.00000001 -( ParkManager.reducePo));
-        
+        maxPolution = 100;
         PolutionCount = InternalPolution;
         if (PolutionCount> 100)
         {
@@ -34,7 +36,9 @@ public class PolutionManager : MonoBehaviour
             statHighPollution = false;
             temps = 0;
         }
-        DisplayPolution.GetComponent<TMP_Text>().text = " Polution = " + PolutionCount;
-    
+        DisplayPolution.GetComponent<TMP_Text>().text = " Polution = " + Mathf.Round(PolutionCount * 100.0f) * 0.01f;
+        DisplayPol.GetComponent<TMP_Text>().text =      " Polution = " + Mathf.Round(PolutionCount * 100.0f) * 0.01f + " / " + maxPolution;
+
+
     }
 }

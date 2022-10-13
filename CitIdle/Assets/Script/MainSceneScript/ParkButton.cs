@@ -4,33 +4,20 @@ using UnityEngine;
 
 public class ParkButton : MonoBehaviour
 {
-    public bool doubleTap;
-    int tap;
+
     public void clickOnPark()
     {
-        tap++;
 
-        if (tap==1)
+
+
+        if (MoneyManager.InternalMoney > ParkManager.priceStatLvl)
         {
-            if (MoneyManager.InternalMoney > LevelManager.statLevelPark * 2.5)
-            {
-                LevelManager.statLevelPark++;
-                MoneyManager.InternalMoney -= LevelManager.statLevelPark * (float)2.5;
-                StartCoroutine(DoubleTapInterval());
+            MoneyManager.InternalMoney -= ParkManager.priceStatLvl;
+            LevelManager.statLevelPark++;
+            ParkManager.priceStatLvl += ParkManager.priceStatLvl * 1.1f;
 
-            }
         }
-        else if (tap >1&& doubleTap)
-          {
-            tap = 0;
-            doubleTap = false;
-           }
-       
-    }
 
-    IEnumerator DoubleTapInterval()
-    {
-        yield return new WaitForSeconds(1);
-        doubleTap = true;
+
     }
 }
