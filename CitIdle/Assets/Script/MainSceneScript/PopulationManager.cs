@@ -25,19 +25,13 @@ public class PopulationManager : MonoBehaviour
                 break;
             case 2:
                 InternalPopulation = 10000;
-                PopulationCount = InternalPopulation;
-
-
+                
                 break;
             case 3:
                 InternalPopulation = 100000;
-                PopulationCount = InternalPopulation;
-
                 break;
             case 4:
                 InternalPopulation = 1000000;
-                PopulationCount = InternalPopulation;
-
                 break;
 
 
