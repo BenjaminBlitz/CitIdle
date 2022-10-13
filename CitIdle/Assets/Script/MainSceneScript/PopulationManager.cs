@@ -8,49 +8,62 @@ public class PopulationManager : MonoBehaviour
 
 
 
-    public static float PopulationCount= 10000;
+    public static float PopulationCount;
     public float InternalPopulation;
     public GameObject DisplayPop;
-    public float timeRemaining = 10;
-   
-    private void Update()
+    public float nextActionTime = 0;
+    public float period = 0.3f;
+
+    private void Start()
     {
-        switch(LevelManager.statLevelMairie)
+        switch (LevelManager.statLevelMairie)
         {
             case 1:
-                InternalPopulation = 10000;
+                InternalPopulation = 1000;
+                PopulationCount = InternalPopulation;
+
                 break;
             case 2:
-                InternalPopulation = 100000;
-;
+                InternalPopulation = 10000;
+                
                 break;
             case 3:
-                InternalPopulation = 10000000;
+                InternalPopulation = 100000;
                 break;
             case 4:
-                InternalPopulation = 10000000000;
+                InternalPopulation = 1000000;
                 break;
 
 
         }
+    }
+    private void Update()
+    {
 
-        
-        PopulationCount = InternalPopulation;
+
+
         if (PolutionManager.statHighPollution)
         {
-            if (timeRemaining>0)
+             if ( Time.time > nextActionTime)
             {
-                timeRemaining--;
-                
-            }
-            else
-            {
+            nextActionTime += period;
                 PopulationCount--;
-                timeRemaining = 10;
-            }
-            
+
+               }
+
+
+           
 
         }
+        if(!PolutionManager.statHighPollution && PopulationCount< InternalPopulation*10)
+        {
+            if (Time.time > nextActionTime)
+            {
+                nextActionTime += period;
+                PopulationCount++;
+            }
+        }
+
         DisplayPop.GetComponent<TMP_Text>().text = " Pop = " + PopulationCount;
     }
 }

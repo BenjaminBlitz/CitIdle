@@ -30,7 +30,7 @@ public class ParkButton : MonoBehaviour
 
     IEnumerator DoubleTapInterval()
     {
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(4);
         doubleTap = true;
     }
 }
