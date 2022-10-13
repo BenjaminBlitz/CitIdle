@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ClickMairieAnimation : MonoBehaviour
+public class ClickShopAnimation : MonoBehaviour
 {
     public GameObject obj = null;
-    public GameObject gain = null; 
+    public PanelOpener panel;
 
     private Animator movement = null;
     // Start is called before the first frame update
@@ -28,12 +28,8 @@ public class ClickMairieAnimation : MonoBehaviour
 
                 /*Instantiate(gain, new Vector3(0, 0, 0), Quaternion.identity);
                 gain.transform.parent = GameObject.Find("Canvas").transform;*/
-                var newObj = GameObject.Instantiate(gain);
-                newObj.transform.parent = GameObject.Find("Canvas").transform;
-                newObj.transform.position = new Vector3(Screen.width * 0.5f, Screen.height * 0.3f, 0);
-                Object.Destroy(newObj, 0.5f);
-
                 movement.Play("animation");
+                panel.OpenPanel();
             }
         }
 
