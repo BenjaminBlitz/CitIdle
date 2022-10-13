@@ -16,7 +16,7 @@ public class MoneyManager : MonoBehaviour
 
     private void Update()
     {
-        InternalMoney += (float)(PopulationManager.PopulationCount * 0.0000001);
+        InternalMoney += (float)(PopulationManager.PopulationCount * 0.0000001*LevelManager.statLevelCitoyen*4);
         MoneyCount = InternalMoney;
         if ( MoneyCount<0)
         {
