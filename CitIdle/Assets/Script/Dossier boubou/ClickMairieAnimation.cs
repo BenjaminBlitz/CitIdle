@@ -32,8 +32,9 @@ public class ClickMairieAnimation : MonoBehaviour
                 newObj.transform.parent = GameObject.Find("Canvas").transform;
                 newObj.transform.position = new Vector3(Screen.width * 0.5f, Screen.height * 0.3f, 0);
                 Object.Destroy(newObj, 0.5f);
-
+                MainButton.clickOnButton();
                 movement.Play("animation");
+
             }
         }
 
