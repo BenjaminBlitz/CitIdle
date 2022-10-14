@@ -641,9 +641,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 146367961}
+      - m_Target: {fileID: 11500000, guid: 0ff35b2cc6137a142bbccbec2b23a5f0, type: 3}
         m_TargetAssemblyTypeName: PanelOpener, Assembly-CSharp
-        m_MethodName: OpenPanel
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2139,7 +2139,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ff35b2cc6137a142bbccbec2b23a5f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  panel: {fileID: 0}
+  panel: {fileID: 281198712}
 --- !u!114 &492055269
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2858,7 +2858,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ff35b2cc6137a142bbccbec2b23a5f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  panel: {fileID: 0}
+  panel: {fileID: 402049438}
 --- !u!114 &604216606
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5322,7 +5322,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ff35b2cc6137a142bbccbec2b23a5f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  panel: {fileID: 0}
+  panel: {fileID: 480029939}
 --- !u!114 &1391620958
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -11,7 +11,7 @@ public class StockManager : MonoBehaviour
     public static float popo;
         public static float nombreAction1;
         public float nombreStatAction1;
-        public float timeLeft = 5;
+        public float timeLeft = 10;
         public GameObject Action1;
         public GameObject Action2;
         public GameObject Action3;
@@ -19,6 +19,7 @@ public class StockManager : MonoBehaviour
         public GameObject b2bis;
         public GameObject b3;
         public GameObject b3bis;
+        public GameObject time;
 
 
 
@@ -74,15 +75,16 @@ public class StockManager : MonoBehaviour
         timeLeft -= Time.deltaTime;
             if (timeLeft < 0)
             {
-                action1Price = Random.Range(action1Price - 20, action1Price+ 20);
-                action2Price = Random.Range(action2Price - 50, action2Price + 50);
+                action1Price = Random.Range(20, action1Price+ 20);
+                action2Price = Random.Range(75, action2Price + 50);
 
-                action3Price = Random.Range(action3Price - 100, action3Price + 100);
+                action3Price = Random.Range(175, action3Price + 100);
     
 
-            timeLeft = 5;
+            timeLeft = 10;
             }
 
+        time.GetComponent<TMP_Text>().text = "Temps Restant " + (int)timeLeft +"secondes";
 
 
         if (LevelManager.statLevelBank == 1)
