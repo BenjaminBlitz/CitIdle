@@ -10,6 +10,7 @@ public class PolutionManager : MonoBehaviour
     public float InternalPolution;
     public GameObject DisplayPolution;
     public GameObject DisplayPol;
+    public GameObject PolutionNuage;
     public float maxPolution;
     public bool highPollution;
     public static bool statHighPollution;
@@ -38,7 +39,7 @@ public class PolutionManager : MonoBehaviour
         }
         DisplayPolution.GetComponent<TMP_Text>().text = " Polution = " + Mathf.Round(PolutionCount * 100.0f) * 0.01f;
         DisplayPol.GetComponent<TMP_Text>().text =      " Polution = " + Mathf.Round(PolutionCount * 100.0f) * 0.01f + " / " + maxPolution;
-
+        PolutionNuage.GetComponent<SpriteRenderer>().color = new Color(0,0,0,((170*PolutionCount)/100)/255);
 
     }
 }
