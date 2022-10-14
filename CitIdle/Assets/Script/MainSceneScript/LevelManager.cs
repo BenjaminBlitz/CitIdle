@@ -113,6 +113,7 @@ public class LevelManager : MonoBehaviour
 
     public void Update()
     {
+        Animation anim = GetComponent<Animation>();
         if (levelMairie == 1 && One)
         {
             BlackScreen.SetActive(false);
@@ -191,7 +192,8 @@ public class LevelManager : MonoBehaviour
         if (levelMairie == 3 && Tree)
         {
             BlackScreen.SetActive(true);
-            Transition.Play("lvlup_fade_up");
+            //Transition.Play("lvlup_fade_up");
+            anim.Play();
             //Thread.Sleep(2000);
             mairieV1.SetActive(false);
             mairieV2.SetActive(false);
@@ -228,8 +230,9 @@ public class LevelManager : MonoBehaviour
         if (levelMairie == 4 && Four)
         {
             BlackScreen.SetActive(true);
-            Transition.Play("lvlup_fade_up");
+            //Transition.Play("lvlup_fade_up");
             //Thread.Sleep(2000);
+            anim.Play();
             mairieV1.SetActive(false);
             mairieV2.SetActive(false);
             mairieV3.SetActive(false);
