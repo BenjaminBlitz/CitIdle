@@ -2,20 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using UnityEngine;
-
+using TMPro;
 public class PrestigeManager : MonoBehaviour
 {
     public float actualPrestigePoints;
     public static float prestigePoints;
 
-    public float incomeCost;
-    public float populationCost;
-    public float polutionCost;
+    public static float incomeCost=1;
+    public static float populationCost=1;
+    public static float polutionCost=1;
 
     public static int incomeLevel;
     public static int populationLevel;
     public static int polutionLevel;
-
+    public GameObject DisplayPrestige;
     public string sceneName;
 
     // Start is called before the first frame update
@@ -26,44 +26,50 @@ public class PrestigeManager : MonoBehaviour
         actualPrestigePoints = prestigePoints;
     }
 
-    public void upradeIncome()
-    {
-        if (actualPrestigePoints >= incomeCost)
+    public static void upradeIncome()
+    {   
+        
+        if (prestigePoints >= incomeCost)
         {
-            actualPrestigePoints -= incomeCost;
+            prestigePoints -= incomeCost;
             incomeCost *= 1.1f;
+            MoneyManager.incomeLevel +=1;
         }
     }    
-    public void upradePopulation()
+    public static void upradePopulation()
     {
-        if (actualPrestigePoints >= populationCost)
+        if (prestigePoints >= populationCost)
         {
-            actualPrestigePoints -= populationCost;
+            prestigePoints -= populationCost;
             populationCost *= 1.1f;
         }
     }    
-    public void upgradePolution()
+    public static void upgradePolution()
     {
-        if (actualPrestigePoints >= polutionCost)
+        if (prestigePoints >= polutionCost)
         {
-            actualPrestigePoints -= polutionCost;
+            prestigePoints -= polutionCost;
             polutionCost *= 1.1f;
         }
     }
     public void prestigeGame()
     {
         SceneManager.LoadScene(sceneName);
-        print(actualPrestigePoints);
+        print(prestigePoints);
     }
-    public void upPoint()
+    public static void upPoint()
     {
-        actualPrestigePoints++;
+        prestigePoints++;
     }
 
     // Update is called once per frame
     void Update()
     {
+        actualPrestigePoints = prestigePoints;
         PlayerPrefs.SetFloat("prestige",actualPrestigePoints);
+
+        DisplayPrestige.GetComponent<TMP_Text>().text = " Prestige points = " + actualPrestigePoints;
+
 
 
     }
