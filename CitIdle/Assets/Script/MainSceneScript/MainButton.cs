@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MainButton : MonoBehaviour
 {
-    public void clickOnButton()
+    public static void clickOnButton()
     {
         MoneyManager.InternalMoney ++;
     }
