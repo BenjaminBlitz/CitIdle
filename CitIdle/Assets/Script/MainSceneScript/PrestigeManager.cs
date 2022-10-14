@@ -68,7 +68,7 @@ public class PrestigeManager : MonoBehaviour
         {
             prestigePoints -= polutionCost;
             polutionCost *= 1.1f;
-
+            PolutionManager.polutionLevel++;
             polutionLevel++;
         }
     }
@@ -77,10 +77,10 @@ public class PrestigeManager : MonoBehaviour
         SceneManager.LoadScene(sceneName);
         MoneyManager.InternalMoney = 0;
     }
-    public static void upPoint()
+    /*public static void upPoint()
     {
         prestigePoints+=100;
-    }
+    }*/
 
     // Update is called once per frame
     void Update()
