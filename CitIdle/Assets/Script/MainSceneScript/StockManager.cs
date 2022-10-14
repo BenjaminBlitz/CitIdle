@@ -9,11 +9,22 @@ public class StockManager : MonoBehaviour
 
 
     public static float popo;
-        public static float nombreAction;
-        public float nombreStatAction;
-        public float timeLeft = 10;
-        public GameObject walletDisplay;
-        public struct Stock
+        public static float nombreAction1;
+        public float nombreStatAction1;
+        public float timeLeft = 5;
+        public GameObject Action1;
+        public GameObject Action2;
+        public GameObject Action3;
+
+    public static float  action1Price=30;
+        public static float nombreAction2;
+        public float nombreStatAction2;
+        public static float action2Price = 100;
+        public static float action3Price = 200;
+        public static float nombreAction3;
+
+
+    public struct Stock
         {
            public string name;
            public float stock;
@@ -47,24 +58,46 @@ public class StockManager : MonoBehaviour
 
         public void Update()
         {
-        setStock(tesla, Random.Range(-50, 50));
         timeLeft -= Time.deltaTime;
             if (timeLeft < 0)
             {
-            popo = Random.Range(-50, 50);
+                action1Price = Random.Range(action1Price - 20, action1Price+ 20);
+                action2Price = Random.Range(action2Price - 50, action2Price + 50);
+                action3Price = Random.Range(action3Price - 100, action3Price + 100);
+    
 
-             setStock(tesla, Random.Range(-50, 50));
-                timeLeft = 10;
+
+            timeLeft = 5;
             }
 
-           
 
 
-        walletDisplay.GetComponent<TMP_Text>().text = " Nombre Action = " + nombreAction + "prix = " + popo;
+        if (LevelManager.statLevelBank == 1)
+        {
+            Action1.GetComponent<TMP_Text>().text = " Nombre Action = " + nombreAction1 + "prix = " + action1Price;
+
+        }
                     
+            if (LevelManager.statLevelBank ==2)
+            {
+            Action1.GetComponent<TMP_Text>().text = " Nombre Action = " + nombreAction1 + "prix = " + action1Price;
+            Action2.GetComponent<TMP_Text>().text = " Nombre Action = " + nombreAction2 + "prix = " + action2Price;
 
 
-          }
+        }
+        if (LevelManager.statLevelBank == 3)
+        {
+            Action1.GetComponent<TMP_Text>().text = " Nombre Action = " + nombreAction1 + "prix = " + action1Price;
+            Action2.GetComponent<TMP_Text>().text = " Nombre Action = " + nombreAction2 + "prix = " + action2Price;
+            Action3.GetComponent<TMP_Text>().text = " Nombre Action = " + nombreAction3 + "prix = " + action3Price;
+
+
+
+        }
+
+
+
+    }
 
 
 
