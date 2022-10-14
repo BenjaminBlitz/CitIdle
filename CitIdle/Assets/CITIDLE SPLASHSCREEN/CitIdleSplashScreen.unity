@@ -499,7 +499,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57bb5ce423729d843a3461632e685cbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_SceneName: SceneBoubou
+  m_SceneName: Game
 --- !u!4 &1693919594
 Transform:
   m_ObjectHideFlags: 0

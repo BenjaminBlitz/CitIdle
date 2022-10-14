@@ -113,6 +113,8 @@ public class LevelManager : MonoBehaviour
 
     public void Update()
     {
+
+        levelMairie = statLevelMairie;
         Animation anim = GetComponent<Animation>();
         if (levelMairie == 1 && One)
         {

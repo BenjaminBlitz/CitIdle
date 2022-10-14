@@ -12,6 +12,6 @@ EditorBuildSettings:
     path: Assets/CITIDLE SPLASHSCREEN/CitIdleSplashScreen.unity
     guid: 98b9977de3e5edd4689be631c98cc679
   - enabled: 1
-    path: Assets/Scenes/SceneBoubou.unity
-    guid: 14c6d93ba00e5a54385b3ebab6a6a04d
+    path: Assets/Scenes/Game.unity
+    guid: bd227754920cd9346835c45fe23531ba
   m_configObjects: {}
