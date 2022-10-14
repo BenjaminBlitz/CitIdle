@@ -14,6 +14,8 @@ public class PopulationManager : MonoBehaviour
     public float nextActionTime = 0;
     public float period = 0.3f;
 
+    public static int populationLevel;
+
     private void Start()
     {
         switch (LevelManager.statLevelMairie)
@@ -61,7 +63,7 @@ public class PopulationManager : MonoBehaviour
            
 
         }
-        if(!PolutionManager.statHighPollution && PopulationCount< InternalPopulation*10)
+        if(!PolutionManager.statHighPollution && PopulationCount< (InternalPopulation*10)*(1+(0.1f*populationLevel)))
         {
             if (Time.time > nextActionTime)
             {

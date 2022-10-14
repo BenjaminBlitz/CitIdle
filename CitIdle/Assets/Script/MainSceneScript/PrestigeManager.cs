@@ -24,17 +24,20 @@ public class PrestigeManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        /*if (incomeLevel < 1) { incomeLevel = 1; }
+        if (populationLevel < 1) { populationLevel = 1; }
+        if (polutionLevel < 1) { polutionLevel = 1; }*/
         sceneName = SceneManager.GetActiveScene().name;
         prestigePoints = PlayerPrefs.GetFloat("prestige");
 
         incomeLevel = PlayerPrefs.GetInt("prestigeIncome");
-        //incomeCost = PlayerPrefs.GetFloat("prestigeIncomeCost");
+        incomeCost = 1 + PlayerPrefs.GetFloat("prestigeIncomeCost");
 
         populationLevel = PlayerPrefs.GetInt("prestigePopulation");
-        //populationCost = PlayerPrefs.GetFloat("prestigePopulationCost");
+        populationCost = 1 + PlayerPrefs.GetFloat("prestigePopulationCost");
 
         polutionLevel = PlayerPrefs.GetInt("prestigePolution");
-        //polutionCost = PlayerPrefs.GetFloat("prestigePolutionCost");
+        polutionCost = 1 + PlayerPrefs.GetFloat("prestigePolutionCost");
         actualPrestigePoints = prestigePoints;
     }
 
@@ -44,7 +47,7 @@ public class PrestigeManager : MonoBehaviour
         if (prestigePoints >= incomeCost)
         {
             prestigePoints -= incomeCost;
-            incomeCost *= 1.1f;
+            incomeCost *= 1.05f;
             MoneyManager.incomeLevel +=1;
             incomeLevel++;
         }
@@ -55,6 +58,8 @@ public class PrestigeManager : MonoBehaviour
         {
             prestigePoints -= populationCost;
             populationCost *= 1.1f;
+            PopulationManager.populationLevel++;
+            populationLevel++;
         }
     }    
     public static void upgradePolution()
@@ -63,6 +68,8 @@ public class PrestigeManager : MonoBehaviour
         {
             prestigePoints -= polutionCost;
             polutionCost *= 1.1f;
+
+            polutionLevel++;
         }
     }
     public void prestigeGame()
@@ -72,7 +79,7 @@ public class PrestigeManager : MonoBehaviour
     }
     public static void upPoint()
     {
-        prestigePoints++;
+        prestigePoints+=100;
     }
 
     // Update is called once per frame
@@ -82,13 +89,13 @@ public class PrestigeManager : MonoBehaviour
         PlayerPrefs.SetFloat("prestige",actualPrestigePoints);
 
         PlayerPrefs.SetInt("prestigeIncome",incomeLevel);
-        //PlayerPrefs.SetFloat("prestigeIncomeCost",incomeCost);
+        PlayerPrefs.SetFloat("prestigeIncomeCost",incomeCost);
 
         PlayerPrefs.SetInt("prestigePopulation",populationLevel);
-        //PlayerPrefs.SetFloat("prestigePopulationCost", populationCost);
+        PlayerPrefs.SetFloat("prestigePopulationCost", populationCost);
 
         PlayerPrefs.SetInt("prestigePolution",polutionLevel);
-        //PlayerPrefs.SetFloat("prestigePolutionCost", polutionCost);
+        PlayerPrefs.SetFloat("prestigePolutionCost", polutionCost);
 
         DisplayPrestige.GetComponent<TMP_Text>().text = " Prestige points = " + actualPrestigePoints;
         DisplayIncome.GetComponent<TMP_Text>().text = " Income level = " + incomeLevel + " cost :" + incomeCost;
