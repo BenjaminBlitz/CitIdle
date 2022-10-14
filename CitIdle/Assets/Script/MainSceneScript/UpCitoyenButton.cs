@@ -13,7 +13,7 @@ public class UpCitoyenButton : MonoBehaviour
 
             MoneyManager.InternalMoney -= CitoyenManager.priceCitoyen;
             LevelManager.statLevelCitoyen++;
-            CitoyenManager.priceCitoyen += CitoyenManager.priceCitoyen * 1.1f;
+            CitoyenManager.priceCitoyen += CitoyenManager.priceCitoyen * 1.01f;
         }
 
     }

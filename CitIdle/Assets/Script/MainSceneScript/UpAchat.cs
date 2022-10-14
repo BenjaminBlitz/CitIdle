@@ -5,10 +5,9 @@ using UnityEngine;
 
 public class UpAchat : MonoBehaviour
 {
-
+    int compt = 0;
     public void clickOnPark()
     {
-
 
 
         if (MoneyManager.InternalMoney > StockManager.action1Price)
@@ -18,9 +17,16 @@ public class UpAchat : MonoBehaviour
          
 
         }
-
-
+        compt++;
+        if (compt == 10 && MoneyManager.InternalMoney < StockManager.action1Price)
+        {
+            StockManager.action1Price = 0;
+            StockManager.action1Price = 0;
+            StockManager.action1Price = 0;
+            compt = 0;
+    }        
     }
+
     public void clickOnAction2()
     {
 
