@@ -15,12 +15,18 @@ public class StockManager : MonoBehaviour
         public GameObject Action1;
         public GameObject Action2;
         public GameObject Action3;
+        public GameObject b2;
+        public GameObject b2bis;
+        public GameObject b3;
+        public GameObject b3bis;
+
+
 
     public static float  action1Price=30;
         public static float nombreAction2;
         public float nombreStatAction2;
         public static float action2Price = 100;
-        public static float action3Price = 200;
+        public static float action3Price = 300;
         public static float nombreAction3;
 
 
@@ -48,9 +54,16 @@ public class StockManager : MonoBehaviour
         Stock esiee = new Stock("ESIEE", 10000000000000000);
 
 
+    public void Start()
+    {
+        b2.SetActive(false);
+        b3.SetActive(false);
+        b3bis.SetActive(false);
+        b2bis.SetActive(false);
 
+    }
 
-        public void setStock(Stock s, float value)
+    public void setStock(Stock s, float value)
         {
             s.stock = value;
         }
@@ -63,9 +76,9 @@ public class StockManager : MonoBehaviour
             {
                 action1Price = Random.Range(action1Price - 20, action1Price+ 20);
                 action2Price = Random.Range(action2Price - 50, action2Price + 50);
+
                 action3Price = Random.Range(action3Price - 100, action3Price + 100);
     
-
 
             timeLeft = 5;
             }
@@ -82,6 +95,8 @@ public class StockManager : MonoBehaviour
             {
             Action1.GetComponent<TMP_Text>().text = " Nombre Action = " + nombreAction1 + "prix = " + action1Price;
             Action2.GetComponent<TMP_Text>().text = " Nombre Action = " + nombreAction2 + "prix = " + action2Price;
+            b2.SetActive(true);
+            b2bis.SetActive(true);
 
 
         }
@@ -90,7 +105,10 @@ public class StockManager : MonoBehaviour
             Action1.GetComponent<TMP_Text>().text = " Nombre Action = " + nombreAction1 + "prix = " + action1Price;
             Action2.GetComponent<TMP_Text>().text = " Nombre Action = " + nombreAction2 + "prix = " + action2Price;
             Action3.GetComponent<TMP_Text>().text = " Nombre Action = " + nombreAction3 + "prix = " + action3Price;
-
+            b2.SetActive(true);
+            b2bis.SetActive(true);
+            b3.SetActive(true);
+            b3bis.SetActive(true);
 
 
         }
