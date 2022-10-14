@@ -187,6 +187,8 @@ public class LevelManager : MonoBehaviour
 
             Two = false;
 
+            PrestigeManager.prestigePoints += 0.0001f;
+
             
         }
         if (levelMairie == 3 && Tree)
@@ -226,6 +228,7 @@ public class LevelManager : MonoBehaviour
             Background4.SetActive(false);
 
             Tree = false;
+            PrestigeManager.prestigePoints += 0.001f;
         }
         if (levelMairie == 4 && Four)
         {
@@ -264,6 +267,7 @@ public class LevelManager : MonoBehaviour
             Background4.SetActive(true);
 
             Four = false;
+            PrestigeManager.prestigePoints += 0.1f;
         }
     }
 }
